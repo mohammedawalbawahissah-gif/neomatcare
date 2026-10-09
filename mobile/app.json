@@ -11,7 +11,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#0d9488"
+      "backgroundColor": "#f0f9f4"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -27,7 +27,8 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0d9488"
+        "backgroundColor": "#1a5e42",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "package": "com.neomatcare.mobile",
       "permissions": [

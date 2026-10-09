@@ -6,6 +6,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { useAuth } from '../../contexts/AuthContext';
 import { Input, Button, ErrorBanner } from '../../components/ui';
+import LogoMark from '../../components/ui/LogoMark';
 import Colors from '../../constants/colors';
 import { Typography, Spacing, Radius, Shadow } from '../../constants/theme';
 
@@ -41,9 +42,7 @@ export default function LoginScreen({ navigation }) {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.logoWrap}>
-          <View style={styles.logoBadge}>
-            <Ionicons name="heart" size={26} color={Colors.white} />
-          </View>
+          <LogoMark size={56} style={styles.logoBadge} />
           <Text style={styles.brand}>NeoMatCare</Text>
           <Text style={styles.subtitle}>Emergency Referral System</Text>
         </View>

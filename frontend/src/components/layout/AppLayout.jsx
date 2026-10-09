@@ -10,6 +10,7 @@ import {
 } from 'lucide-react'
 import clsx from 'clsx'
 import AssistantWidget from '@/components/ai/AssistantWidget'
+import { LogoMark } from '@/components/ui/Logo'
 import SyncQueueIndicator from '@/components/sync/SyncQueueIndicator'
 import VoiceLanguagePicker from '@/components/voice/VoiceLanguagePicker'
 
@@ -207,7 +208,7 @@ export default function AppLayout({ children }) {
         {/* Logo */}
         <div className="flex items-center gap-3 px-5 py-5 border-b border-slate-800">
           <div className="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center shadow-glow-green shrink-0">
-            <Heart size={16} className="text-white" fill="white" />
+            <LogoMark size={20} />
           </div>
           <div>
             <p className="font-display text-white text-base leading-tight">NeoMatCare</p>

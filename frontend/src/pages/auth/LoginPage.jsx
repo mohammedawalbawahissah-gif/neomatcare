@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate, Link, useSearchParams } from "react-router-dom"
 import { useAuth } from "@/contexts/AuthContext"
+import { LogoMark } from '@/components/ui/Logo'
 import { Heart, Eye, EyeOff, ArrowRight, CheckCircle, Mail, Lock } from "lucide-react"
 
 const inputStyle = { width:"100%", padding:"10px 14px", border:"1px solid #e2e8f0", borderRadius:"8px", fontSize:"0.875rem", outline:"none", boxSizing:"border-box", background:"white" }
@@ -37,7 +38,7 @@ export default function LoginPage() {
       <div style={{ width:"100%", maxWidth:"420px" }}>
         <div style={{ textAlign:"center", marginBottom:"2rem" }}>
           <div style={{ width:"56px", height:"56px", background:"#2f9466", borderRadius:"16px", display:"inline-flex", alignItems:"center", justifyContent:"center", marginBottom:"1rem", boxShadow:"0 10px 25px rgba(47,148,102,0.35)" }}>
-            <Heart size={24} color="white" fill="white" />
+            <LogoMark size={28} />
           </div>
           <h1 style={{ color:"white", fontFamily:"Georgia, serif", fontSize:"1.9rem", margin:0 }}>NeoMatCare</h1>
           <p style={{ color:"#94a3b8", fontSize:"0.9rem", marginTop:"0.35rem" }}>Emergency Referral System</p>
