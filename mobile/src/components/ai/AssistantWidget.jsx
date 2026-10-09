@@ -15,6 +15,7 @@ import {
   KeyboardAvoidingView, Platform, Modal,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import LogoGlyph from '../ui/LogoGlyph';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAuth } from '../../contexts/AuthContext';
 import { aiApi, getErrorMessage } from '../../api/client';
@@ -174,7 +175,7 @@ export default function AssistantWidget({ context = {} }) {
           <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={styles.sheet}>
             {/* Header */}
             <View style={[styles.header, { backgroundColor: config.color }]}>
-              <View style={styles.headerIcon}><Ionicons name="heart" size={16} color={Colors.white} /></View>
+              <View style={styles.headerIcon}><LogoGlyph size={16} /></View>
               <Text style={styles.headerTitle}>{config.label}</Text>
               {langInfo?.readAloud && (
                 <TouchableOpacity onPress={readAllReplies} style={styles.headerBtn}>
@@ -196,7 +197,7 @@ export default function AssistantWidget({ context = {} }) {
                 const isUser = msg.role === 'user';
                 return (
                   <View key={i} style={[styles.msgRow, isUser && styles.msgRowUser]}>
-                    {!isUser && <View style={[styles.avatarDot, { backgroundColor: config.color }]}><Ionicons name="heart" size={10} color={Colors.white} /></View>}
+                    {!isUser && <View style={[styles.avatarDot, { backgroundColor: config.color }]}><LogoGlyph size={12} /></View>}
                     <View style={[styles.bubble, isUser ? { backgroundColor: config.color } : styles.bubbleAssistant]}>
                       <RenderMessage text={msg.content} isUser={isUser} />
                     </View>
@@ -211,7 +212,7 @@ export default function AssistantWidget({ context = {} }) {
 
               {loading && (
                 <View style={styles.msgRow}>
-                  <View style={[styles.avatarDot, { backgroundColor: config.color }]}><Ionicons name="heart" size={10} color={Colors.white} /></View>
+                  <View style={[styles.avatarDot, { backgroundColor: config.color }]}><LogoGlyph size={12} /></View>
                   <View style={styles.bubbleAssistant}><Spinner size="small" /></View>
                 </View>
               )}
